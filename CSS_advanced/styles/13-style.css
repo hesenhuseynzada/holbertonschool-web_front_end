@@ -50,7 +50,7 @@ a:hover {
 }
 
 a:active {
-    background: var(--color-light-grey);
+    background-color: var(--color-light-grey);
 }
 
 .visually-hidden {
@@ -61,11 +61,11 @@ a:active {
     color: var(--color-primary);
 }
 
-.section-header{
+.section-header {
     text-align: var(--section-header-align);
 }
 
-.section-title{
+.section-title {
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
