@@ -49,6 +49,7 @@ a {
 .section-header{
     text-align: var(--section-header-allign);
 }
+
 .section-tagline {
     color: var(--color-primary);
 }
