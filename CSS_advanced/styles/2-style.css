@@ -1,15 +1,23 @@
-html body{
-    foreground-color: #161616;
+html {
+    scroll-behavior: smooth;
 }
-a{
-    foreground-color: #161616;
+
+body {
+    color: #161616;
 }
-.visually-hidden{
+
+a {
+    color: #161616;
+}
+
+.visually-hidden {
     display: none;
 }
-.card-category{
-    foreground-color: #D73953;
+
+.card-category {
+    color: #D73953;
 }
-.section-tagline{
-    foreground-color: #D73953;
+
+.section-tagline {
+    color: #D73953;
 }
