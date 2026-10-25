@@ -1,21 +1,29 @@
-
-function countPrimeNumbers(number){
-	for (let counter = 0; counter <= 100; counter++) {
-		let notPrime = false;
-		for (let i = 2; i < number; i++) {
-        	if (counter%i===0 && i!==counter) {
-				notPrime = true;
-			}
-		}
-		if (notPrime === false) {
-                console.log(counter);
-		}
-	}
+/**
+  * @description - Task 8
+  * @function processPayment - show the Collecting payment
+  * @param {Number} amount - Value of payment
+  */
+function processPayment(amount) {
+	console.log("Collecting payment of " + amount);
 }
 
+/**
+  * @function processOrder - show the Processing payment order
+  * @param {Number} amount - Value of payment
+  * @param {Number} orderId - Id of the payment
+  */
 
-let t0 = performance.now();
-countPrimeNumbers();
-let t1 = performance.now();
+function processOrder(orderId, amount) {
+	console.log(orderId + " is being processed");
+	processPayment(amount);
+	console.log(orderId + " has been fully processed");
+}
 
-console.log(`Execution time of printing countPrimeNumbers was ${(t1- t0)/100} milliseconds`);
+/** Main part of the code - call the all process of the payment orders
+ * 
+ */
+console.log("Processing orders");
+processOrder(12321, 10.99);
+processOrder(12322, 12.99);
+processOrder(12323, 15.0);
+console.log("All the orders have been processed");

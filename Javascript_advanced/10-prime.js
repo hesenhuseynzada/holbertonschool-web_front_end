@@ -1,25 +1,47 @@
+/**
+  * @description - Task 10
+  * @function countPrimeNumbers - Count the number of primes from 2 to 100 100 times
+  * @returns {Number} number of primes
+  */
 
 
-function countPrimeNumbers(number){
-	for (let counter = 0; counter <= 100; counter++) {
-		let notPrime = false;
-		for (let i = 2; i < number; i++) {
-        	if (counter%i===0 && i!==counter) {
-				notPrime = true;
+ function countPrimeNumbers() {
+    /**
+     * @var {Boolean} isPrime - define True if number is prime or false if not
+     * @var {Number} countPrimes - counter of primes
+     * @var {Number} i - iterator
+     * @var {Number} end - limit of the check
+     * @var {Number} mod - mod of a number
+     */
+    let isPrime;
+    let countPrimes=0; 
+	for (let i = 2; i <= 100; i++)
+	{
+		isPrime = true;
+		let end = Math.round(Math.sqrt(i)); 
+		for (let mod = 2; mod <= end; mod++) {
+			if (i%mod == 0) {
+				isPrime = false;
+				break; 
 			}
 		}
-		if (notPrime === false) {
-                console.log(counter);
-		}
+		if (isPrime) {
+			countPrimes = countPrimes + 1; }
+
 	}
+	console.log(countPrimes);
+	return countPrimes;
 }
-
-
-let t0 = performance.now();
-var times = 100;
-for (var i=0; i < times; i++){
-	countPrimeNumbers();
+    /**
+     * API to measure the time 100 Times
+     * @var {Number} startCountPrimeNumbers - define start time before execution
+     * @var {Number} endCountPrimeNumbers - define end time after execution
+     * @var {Number} j - Iterator
+     */
+let startCountPrimeNumbers = window.performance.now();
+for (let j = 1; j < 101; j++){
+    countPrimeNumbers();
 }
-let t1 = performance.now();
+let endCountPrimeNumbers = window.performance.now();
 
-console.log(`Execution time of printing countPrimeNumbers was ${(t1- t0)/100} milliseconds`);
+console.log("Execution time of calculating prime numbers 100 times was " + (endCountPrimeNumbers - startCountPrimeNumbers) + " milliseconds.");

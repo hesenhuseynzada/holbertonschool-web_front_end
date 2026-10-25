@@ -1,6 +1,13 @@
-console.log('Start of the execution queue');
-for (let iteration = 1; iteration <= 100; ++iteration) {
-	console.log(iteration)
+/**
+  * @description - Task 7
+  * @function setTimeout
+  * @var {Number} i - iterator
+  */
+console.log("Start of the execution queue");
+setTimeout (function(){ 
+                        console.log("Final code block to be executed");
+                      }, 0);
+for (let i = 1; i < 101; i++) {
+	console.log(i);
 }
-setTimeout(console.log('Final code block to be executed'), 0);
-console.log('End of the loop printing');
+console.log("End of the loop printing");
